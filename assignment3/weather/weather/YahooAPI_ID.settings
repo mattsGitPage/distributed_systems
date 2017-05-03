@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="weather" GeneratedClassName="YahooAPI_ID">
+  <Profiles />
+  <Settings>
+    <Setting Name="appId" Type="System.String" Scope="User">
+      <Value Profile="(Default)">    344934ad04e3a093c42823791874ceb813057b19</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

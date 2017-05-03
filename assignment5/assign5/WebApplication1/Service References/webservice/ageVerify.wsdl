@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="validateAge">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="age" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validateAgeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="validateAgeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createHashCode">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="salt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="createHashCodeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="createHashCodeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="validateAgeSoapIn">
+    <wsdl:part name="parameters" element="tns:validateAge" />
+  </wsdl:message>
+  <wsdl:message name="validateAgeSoapOut">
+    <wsdl:part name="parameters" element="tns:validateAgeResponse" />
+  </wsdl:message>
+  <wsdl:message name="createHashCodeSoapIn">
+    <wsdl:part name="parameters" element="tns:createHashCode" />
+  </wsdl:message>
+  <wsdl:message name="createHashCodeSoapOut">
+    <wsdl:part name="parameters" element="tns:createHashCodeResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ageVerifySoap">
+    <wsdl:operation name="validateAge">
+      <wsdl:input message="tns:validateAgeSoapIn" />
+      <wsdl:output message="tns:validateAgeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="createHashCode">
+      <wsdl:input message="tns:createHashCodeSoapIn" />
+      <wsdl:output message="tns:createHashCodeSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ageVerifySoap" type="tns:ageVerifySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validateAge">
+      <soap:operation soapAction="http://tempuri.org/validateAge" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createHashCode">
+      <soap:operation soapAction="http://tempuri.org/createHashCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ageVerifySoap12" type="tns:ageVerifySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="validateAge">
+      <soap12:operation soapAction="http://tempuri.org/validateAge" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createHashCode">
+      <soap12:operation soapAction="http://tempuri.org/createHashCode" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ageVerify">
+    <wsdl:port name="ageVerifySoap" binding="tns:ageVerifySoap">
+      <soap:address location="http://localhost:49861/ageVerify.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ageVerifySoap12" binding="tns:ageVerifySoap12">
+      <soap12:address location="http://localhost:49861/ageVerify.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

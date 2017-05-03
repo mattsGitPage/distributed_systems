@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace= "/"
+            xmlns:ps ="staff2.xsd"
+            elementFormDefault="qualified" >
+
+  <!--top node persons-->
+  <xsd:element name="persons">
+    <xsd:complexType>
+      <xsd:sequence>
+        <!-- child is person and it can have one to many instances-->
+        <xsd:element name="person" minOccurs="1" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <!--second node with name credential phone and category childern-->
+  <xsd:element name="person">
+    <xsd:complexType>
+      <xsd:sequence>
+        <!--list the children under person define the type and occurances and atributtes -->
+        <xsd:element name="name"  minOccurs="1" maxOccurs="1"/>
+        <xsd:element name="credential"  minOccurs="1" maxOccurs="1"/>
+        <xsd:element name="authentication"  minOccurs="1" maxOccurs="1"/>
+        <xsd:element name="authorization"  minOccurs="1" maxOccurs="1"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <!--define the subcategories of name first and last-->
+  <xsd:element name="name">
+    <xsd:complexType>
+      <xsd:sequence>
+        <!--define the children of name first and last and specify the type-->
+        <xsd:element name="user-name" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <!--define the next child credential which has two children and a required attribute-->
+  <xsd:element name="credential">
+    <xsd:complexType>
+      <xsd:sequence>
+        <!--credential has two children and a required attribute all of type string-->
+        <xsd:element name="password" type="xsd:string" >
+          <xsd:attribute name="encryption" type="xsd:string" use="required" default="yes"/>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <!--define the next child credential which has two children and a required attribute-->
+  <xsd:element name="authentication">
+    <xsd:complexType>
+      <xsd:sequence>
+        <!--credential has two children and a required attribute all of type string-->
+        <xsd:element name="id" type="xsd:string" >
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <xsd:element name="authorization">
+    <xsd:complexType>
+      <xsd:sequence>
+        <!--credential has two children and a required attribute all of type string-->
+        <xsd:element name="status" type="xsd:string" >
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+
+</xsd:schema>

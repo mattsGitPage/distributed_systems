@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="fig.xslt"?>
+<persons xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <person>
+    <name>
+      <user-name>matt</user-name>
+    </name>
+    <credential>
+      <password encryption="yes">pass</password>
+    </credential>
+  </person>
+  <person>
+    <name>
+      <user-name>max</user-name>
+    </name>
+    <credential>
+      <password encryption="yes">pass</password>
+    </credential>
+  </person>
+  <person>
+    <name>
+      <user-name>joe</user-name>
+    </name>
+    <credential>
+      <password encryption="yes">pass</password>
+    </credential>
+  </person>
+  <person>
+    <name>
+      <user-name>jjj</user-name>
+    </name>
+    <credential>
+      <password encryption="yes">pal</password>
+    </credential>
+  </person>
+</persons>

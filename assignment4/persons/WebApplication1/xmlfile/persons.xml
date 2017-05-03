@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" standalone="yes"?>
+<persons>
+   <person>
+    <name>
+      <first-name>john</first-name>
+      <last-name>doe</last-name>
+    </name>
+    <credential>
+      <id>jd</id>
+      <password encryption="yes">password</password>
+    </credential>
+    <phone>
+      <work>7025784586</work>
+      <cell provider="">6235874586</cell>
+    </phone>
+    <category>work</category>
+  </person>
+   <person>
+    <name>
+      <first-name>chris</first-name>
+      <last-name>hanson</last-name>
+    </name>
+  <credential>
+    <id>ch</id>
+    <password encryption="yes">noOneKnows</password>
+  </credential>
+  <phone>
+    <work>6235896523</work>
+    <cell provider="Sprint">6065785966</cell>
+  </phone>
+  <category>family</category>
+</person>
+  <person>
+    <name>
+      <first-name>alex</first-name>
+      <last-name>masel</last-name>
+    </name>
+    <credential>
+      <id>am</id>
+      <password encryption="yes">tryAndGuess</password>
+    </credential>
+    <phone>
+      <work>5054587852</work>
+      <cell provider="Verizon">5054551203</cell>
+    </phone>
+    <category>friend</category>
+  </person>
+   <person>
+    <name>
+      <first-name>garrett</first-name>
+      <last-name>shook</last-name>
+    </name>
+    <credential>
+      <id>gs</id>
+      <password encryption="yes">impossible</password>
+    </credential>
+    <phone>
+      <work>6025236874</work>
+      <cell provider="">6026668956</cell>
+    </phone>
+    <category>friend</category>
+  </person>
+   <person>
+    <name>
+      <first-name>john</first-name>
+      <last-name>connor</last-name>
+    </name>
+    <credential>
+      <id>jc</id>
+      <password encryption="yes">figureIt</password>
+    </credential>
+     <phone>
+       <work>7025867856</work>
+       <cell provider="sprint">4023586203</cell>
+     </phone>
+    <category>family</category>
+  </person>
+</persons>

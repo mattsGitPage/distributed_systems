@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace= "/"
+            xmlns:ps ="Persons.xsd"
+            elementFormDefault="qualified" >
+
+<!--top node persons-->
+ <xsd:element name="persons">
+    <xsd:complexType>
+      <xsd:sequence>
+        <!-- child is person and it can have one to many instances-->
+        <xsd:element name="person" minOccurs="1" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <!--second node with name credential phone and category childern-->
+  <xsd:element name="person">
+    <xsd:complexType>
+      <xsd:sequence>
+        <!--list the children under person define the type and occurances and atributtes -->
+        <xsd:element name="name"  minOccurs="1" maxOccurs="1"/>
+        <xsd:element name="credential"  minOccurs="1" maxOccurs="1"/>
+        <xsd:element name="phone"  minOccurs="0" maxOccurs="1"/>
+        <xsd:element name="category" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <!--define the subcategories of name first and last-->
+  <xsd:element name="name">
+    <xsd:complexType>
+      <xsd:sequence>
+        <!--define the children of name first and last and specify the type-->
+        <xsd:element name="first-name" type="xsd:string"/>
+        <xsd:element name="last-name" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <!--define the next child credential which has two children and a required attribute-->
+  <xsd:element name="credential">
+    <xsd:complexType>
+      <xsd:sequence>
+        <!--credential has two children and a required attribute all of type string-->
+        <xsd:element name="id" type="xsd:string"/>
+        <xsd:element name="password" type="xsd:string" >
+          <xsd:attribute name="encryption" type="xsd:string" use="required" default="yes"/>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <!--phone node with two children work and cell
+       both are ints and cell has an option child provider-->
+  <xsd:element name="phone">
+    <xsd:complexType>
+      <xsd:sequence>
+        <!--both phones are type int and have an optional provider attribute-->
+        <xsd:element name="work" type ="xsd:int"/>
+        <xsd:element name="cell" type="xsd:int">
+          <xsd:attribute name="provider" type="xsd:string" use="optional"/>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+  <!--no child nodes to define here-->
+  <xsd:element name="category">
+    <xsd:complexType>
+      <xsd:sequence>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+
+</xsd:schema>

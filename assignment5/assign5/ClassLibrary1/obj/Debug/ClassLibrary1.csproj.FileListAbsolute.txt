@@ -1,0 +1,6 @@
+c:\Users\matthew dunning\documents\visual studio 2015\Projects\assign5\ClassLibrary1\bin\Debug\ClassLibrary1.dll.config
+c:\Users\matthew dunning\documents\visual studio 2015\Projects\assign5\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+c:\Users\matthew dunning\documents\visual studio 2015\Projects\assign5\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+c:\Users\matthew dunning\documents\visual studio 2015\Projects\assign5\ClassLibrary1\obj\Debug\ClassLibrary1.csprojResolveAssemblyReference.cache
+c:\Users\matthew dunning\documents\visual studio 2015\Projects\assign5\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+c:\Users\matthew dunning\documents\visual studio 2015\Projects\assign5\ClassLibrary1\obj\Debug\ClassLibrary1.pdb

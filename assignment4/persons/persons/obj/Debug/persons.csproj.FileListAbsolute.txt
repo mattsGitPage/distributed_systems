@@ -1,0 +1,6 @@
+c:\users\matthew dunning\documents\visual studio 2015\Projects\persons\persons\bin\Debug\persons.exe.config
+c:\users\matthew dunning\documents\visual studio 2015\Projects\persons\persons\bin\Debug\persons.exe
+c:\users\matthew dunning\documents\visual studio 2015\Projects\persons\persons\bin\Debug\persons.pdb
+c:\users\matthew dunning\documents\visual studio 2015\Projects\persons\persons\obj\Debug\persons.csprojResolveAssemblyReference.cache
+c:\users\matthew dunning\documents\visual studio 2015\Projects\persons\persons\obj\Debug\persons.exe
+c:\users\matthew dunning\documents\visual studio 2015\Projects\persons\persons\obj\Debug\persons.pdb
